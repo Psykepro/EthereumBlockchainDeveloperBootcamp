@@ -7,7 +7,7 @@ contract StartUpdateExample {
     
     bool public paused;
     
-    constructor() public {
+    constructor() {
         owner = msg.sender;
     }
     
