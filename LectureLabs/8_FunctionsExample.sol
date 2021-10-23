@@ -40,10 +40,12 @@ contract FunctionsExample {
         _to.transfer(_amount);
     }
     
+    // Receive Function: This function is executed on a call to the contract with empty calldata. If no such function exists, but a payable fallback function exists.
     receive() external payable {
         receiveMoney();
     }
     
+    // Fallback Function: This function is called  when a non-existent function is called on the contract or no receive function.
     fallback() external payable {
         receiveMoney();
     }
